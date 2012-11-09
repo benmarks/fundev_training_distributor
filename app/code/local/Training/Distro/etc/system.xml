@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<training translate="label" module="training_distro">
+			<label>Training</label>
+			<sort_order>506</sort_order>
+		</training>
+	</tabs>
+	<sections>
+		<training_distro translate="label" module="training_distro">
+			<label>Distributors</label>
+			<sort_order>10</sort_order>
+			<tab>training</tab><!-- associate with new tab from above -->
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<!-- group configuration will be added here -->
+                <general translate="label" module="training_distro">
+                	<label>General Settings</label>
+                	<sort_order>10</sort_order>
+                	<show_in_default>1</show_in_default>
+                	<show_in_website>1</show_in_website>
+                	<show_in_store>1</show_in_store>
+                	<fields>
+                		<!-- configuration for the fields will be added here -->
+                        <!-- "training_distro/general/default" field -->
+                        <default_distributor translate="label" module="training_distro">
+                        	<label>Default Distributor</label>
+                        	<frontend_type>select</frontend_type><!-- form input type -->
+                        	<source_model>training_distro/system_config_source_distributor</source_model>
+                            <sort_order>10</sort_order>
+                        	<show_in_default>1</show_in_default>
+                        	<show_in_website>1</show_in_website>
+                        	<show_in_store>1</show_in_store>
+                            <depends>
+                                <show_distributor>1</show_distributor>
+                            </depends>
+                        </default_distributor>
+
+                        <!-- "training_distro/general/show_distributors" field -->
+                        <show_distributor translate="label comment tooltip" module="training_distro">
+                        	<label>Display Distributors</label>
+                        	<frontend_type>select</frontend_type><!-- form input type -->
+                        	<!-- define custom source model to provide options to the select -->
+                        	<source_model>training_distro/system_config_source_show</source_model>
+                        	<sort_order>20</sort_order>
+                        	<show_in_default>1</show_in_default>
+                        	<show_in_website>1</show_in_website>
+                        	<show_in_store>1</show_in_store>
+                        	<comment>Display distributor on product page</comment>
+                        	<tooltip>Change this to "Show" to display the "Default Distributor" field</tooltip>
+                        </show_distributor>
+
+                	</fields>
+                </general>
+
+			</groups>
+        </training_distro>
+	</sections>
+</config>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+    <!-- Add adminhtml menu entry under the Catalog section -->
+    <menu>
+        <catalog>
+            <children>
+                <training_distro translate="title" module="training_distro">
+                    <title>Manage Distributors</title>
+                    <action>adminhtml/distributor</action>
+                    <sort_order>250</sort_order>
+                </training_distro>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <training_distro translate="title" module="training_distro">
+                                <title>Manage Distributors Section</title>
+                                <sort_order>250</sort_order>
+                            </training_distro>
+                        </children>
+                    </catalog>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <training_distro translate="title" module="training_distro">
+                                        <title>Manage Distributors Section</title>
+                                        <sort_order>250</sort_order>
+                                    </training_distro>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,34 +1,34 @@
 <?php
 
 class Training_Distro_Block_Adminhtml_Distributor_Grid
-	extends Mage_Adminhtml_Block_Widget_Grid
+    extends Mage_Adminhtml_Block_Widget_Grid
 {
-	/**
-	 * Initialize grid settings
-	 *
-	 */
-	protected function _construct()
-	{
-		parent::_construct();
+    /**
+     * Initialize grid settings
+     *
+     */
+    protected function _construct()
+    {
+        parent::_construct();
 
-		$this->setId('training_distro_list');
-		$this->setDefaultSort('id');
+        $this->setId('training_distro_list');
+        $this->setDefaultSort('id');
 
-		/*
-		 * Override method getGridUrl() in this class to provide URL for ajax
-		 */
-		$this->setUseAjax(true);
-	}
+        /*
+           * Override method getGridUrl() in this class to provide URL for ajax
+           */
+        $this->setUseAjax(true);
+    }
 
-	/**
-	 * Return Grid URL for AJAX query
-	 *
-	 * @return string
-	 */
-	public function getGridUrl()
-	{
-		return $this->getUrl('*/*/grid', array('_current' => true));
-	}
+    /**
+     * Return Grid URL for AJAX query
+     *
+     * @return string
+     */
+    public function getGridUrl()
+    {
+        return $this->getUrl('*/*/grid', array('_current' => true));
+    }
 
     /**
      * Return URL where to send the user when he clicks on a row
@@ -36,32 +36,32 @@ class Training_Distro_Block_Adminhtml_Distributor_Grid
      * @param $row Varien_Object
      * @return string
      */
-	public function getRowUrl($row)
-	{
-		return $this->getUrl('*/*/edit', array('id' => $row->getId()));
-	}
+    public function getRowUrl($row)
+    {
+        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
+    }
 
-	/**
-	 * Prepare distributor collection.
-	 *
-	 * @return Training_Distro_Block_Adminhtml_Distributor_Grid
-	 */
-	protected function _prepareCollection()
-	{
-		$collection = Mage::getResourceModel('training_distro/distributor_collection');
-		$this->setCollection($collection);
+    /**
+     * Prepare distributor collection.
+     *
+     * @return Training_Distro_Block_Adminhtml_Distributor_Grid
+     */
+    protected function _prepareCollection()
+    {
+        $collection = Mage::getResourceModel('training_distro/distributor_collection');
+        $this->setCollection($collection);
 
-		return parent::_prepareCollection();
-	}
+        return parent::_prepareCollection();
+    }
 
 
-	/**
-	 * Prepare grid columns
-	 *
-	 * @return Training_Distro_Block_Adminhtml_Distributor_Grid
-	 */
-	protected function _prepareColumns()
-	{
+    /**
+     * Prepare grid columns
+     *
+     * @return Training_Distro_Block_Adminhtml_Distributor_Grid
+     */
+    protected function _prepareColumns()
+    {
         /**
          * Columns are widget block instances. Rendering of each cell
          * in the grid template occurs via this class's getRowField()
@@ -74,23 +74,23 @@ class Training_Distro_Block_Adminhtml_Distributor_Grid
          * corresponding renderer classes.
          *
          */
-		$this->addColumn('id', array(
-			'header' => $this->__('ID'),
-			'sortable' => true,
-			'width' => '60px',
-			'index' => 'entity_id'
-		));
+        $this->addColumn('id', array(
+            'header' => $this->__('ID'),
+            'sortable' => true,
+            'width' => '60px',
+            'index' => 'entity_id'
+        ));
 
-		$this->addColumn('email', array(
-			'header' => $this->__('Distributor Email'),
-			'index' => 'email',
-		));
+        $this->addColumn('email', array(
+            'header' => $this->__('Distributor Email'),
+            'index' => 'email',
+        ));
 
-		$this->addColumn('name', array(
-			'header' => $this->__('Name'),
-			'index' => 'name',
-			'column_css_class' => 'name'
-		));
+        $this->addColumn('name', array(
+            'header' => $this->__('Name'),
+            'index' => 'name',
+            'column_css_class' => 'name'
+        ));
 
         /**
          * Add functional cell to row. Single actions are rendered as
@@ -99,27 +99,27 @@ class Training_Distro_Block_Adminhtml_Distributor_Grid
          *
          * @see Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Action
          */
-		$this->addColumn('action', array(
-			'header' => $this->__('Action'),
-			'width' => '100px',
-			'type' => 'action',
-			'getter' => 'getId',
-			'actions' => array(
-				array(
-					'caption' => $this->__('Edit'),
-					'url' => array('base' => '*/*/edit'),
-					'field' => 'id',
-				),
-				array(
-					'caption' => $this->__('Delete'),
-					'url' => array('base' => '*/*/delete'),
-					'field' => 'id',
-				),
-			),
-			'filter' => false,
-			'sortable' => false,
-		));
+        $this->addColumn('action', array(
+            'header' => $this->__('Action'),
+            'width' => '100px',
+            'type' => 'action',
+            'getter' => 'getId',
+            'actions' => array(
+                array(
+                    'caption' => $this->__('Edit'),
+                    'url' => array('base' => '*/*/edit'),
+                    'field' => 'id',
+                ),
+                array(
+                    'caption' => $this->__('Delete'),
+                    'url' => array('base' => '*/*/delete'),
+                    'field' => 'id',
+                ),
+            ),
+            'filter' => false,
+            'sortable' => false,
+        ));
 
-		return parent::_prepareColumns();
-	}
+        return parent::_prepareColumns();
+    }
 }

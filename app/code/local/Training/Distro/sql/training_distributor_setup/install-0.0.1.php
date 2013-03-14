@@ -7,7 +7,7 @@
 $installer = $this;
 $installer->startSetup();
 
-$tableName = $installer->getTable('training_distro/distributor');
+$tableName = $installer->getTable('distro/distributor');
 
 if ($installer->getConnection()->isTableExists($tableName)){
     $installer->getConnection()->dropTable($tableName);

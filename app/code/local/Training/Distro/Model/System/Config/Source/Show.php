@@ -7,11 +7,11 @@ class Training_Distro_Model_System_Config_Source_Show
         return array(
             array(
                 'value' => 1,
-                'label' => Mage::helper('training_distro')->__('Show')
+                'label' => Mage::helper('distro')->__('Show')
             ),
             array(
                 'value' => 0,
-                'label' => Mage::helper('training_distro')->__('Hide')
+                'label' => Mage::helper('distro')->__('Hide')
             ),
         );
     }

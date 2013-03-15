@@ -2,20 +2,20 @@
 <layout>
     <adminhtml_distributor_list>
         <reference name="content">
-            <block type="training_distro/adminhtml_distributor" name="distributor"/>
+            <block type="distro/adminhtml_distributor" name="distributor"/>
         </reference>
     </adminhtml_distributor_list>
 
     <adminhtml_distributor_grid>
-        <block type="training_distro/adminhtml_distributor_grid" name="ajax_grid" output="toHtml"/>
+        <block type="distro/adminhtml_distributor_grid" name="ajax_grid" output="toHtml"/>
     </adminhtml_distributor_grid>
 
     <adminhtml_distributor_edit>
         <reference name="content">
-            <block type="training_distro/adminhtml_distributor_edit" name="training_distro_form"/>
+            <block type="distro/adminhtml_distributor_edit" name="distro_form"/>
         </reference>
         <reference name="left">
-            <block type="training_distro/adminhtml_distributor_edit_tabs" name="training_distro_tabs"/>
+            <block type="distro/adminhtml_distributor_edit_tabs" name="distro_tabs"/>
         </reference>
     </adminhtml_distributor_edit>
 

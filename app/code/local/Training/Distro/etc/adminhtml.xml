@@ -4,11 +4,11 @@
     <menu>
         <catalog>
             <children>
-                <training_distro translate="title" module="training_distro">
+                <distro translate="title" module="distro">
                     <title>Manage Distributors</title>
                     <action>adminhtml/distributor</action>
                     <sort_order>250</sort_order>
-                </training_distro>
+                </distro>
             </children>
         </catalog>
     </menu>
@@ -18,20 +18,20 @@
                 <children>
                     <catalog>
                         <children>
-                            <training_distro translate="title" module="training_distro">
+                            <distro translate="title" module="distro">
                                 <title>Manage Distributors Section</title>
                                 <sort_order>250</sort_order>
-                            </training_distro>
+                            </distro>
                         </children>
                     </catalog>
                     <system>
                         <children>
                             <config>
                                 <children>
-                                    <training_distro translate="title" module="training_distro">
+                                    <distro translate="title" module="distro">
                                         <title>Manage Distributors Section</title>
                                         <sort_order>250</sort_order>
-                                    </training_distro>
+                                    </distro>
                                 </children>
                             </config>
                         </children>

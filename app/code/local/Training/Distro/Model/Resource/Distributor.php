@@ -5,7 +5,7 @@ class Training_Distro_Model_Resource_Distributor
 {
     protected function _construct()
     {
-        $this->_init('training_distro/distributor','entity_id');
+        $this->_init('distro/distributor','entity_id');
     }
 
     protected function _beforeSave(Mage_Core_Model_Abstract $object)

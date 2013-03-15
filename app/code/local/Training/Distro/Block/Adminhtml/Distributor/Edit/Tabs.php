@@ -22,7 +22,7 @@ class Training_Distro_Block_Adminhtml_Distributor_Edit_Tabs
             'label' => $this->__('General'),
             'title' => $this->__('General'),
             'content' => $this->getLayout()
-                ->createBlock('training_distro/adminhtml_distributor_edit_tab_general')
+                ->createBlock('distro/adminhtml_distributor_edit_tab_general')
                 ->toHtml(),
         ));
 

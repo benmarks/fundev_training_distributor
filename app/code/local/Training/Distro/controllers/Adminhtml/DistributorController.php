@@ -6,7 +6,7 @@ class Training_Distro_Adminhtml_DistributorController
     protected function _isAllowed()
     {
         return Mage::getSingleton('admin/session')
-            ->isAllowed('catalog/training_distro');
+            ->isAllowed('catalog/distro');
     }
 
     public function indexAction()
@@ -28,7 +28,7 @@ class Training_Distro_Adminhtml_DistributorController
 
         $this->loadLayout();
 
-        $this->_setActiveMenu('catalog/training_distro');
+        $this->_setActiveMenu('catalog/distro');
 
         $this->renderLayout();
     }
@@ -56,7 +56,7 @@ class Training_Distro_Adminhtml_DistributorController
      */
     public function editAction()
     {
-        $model = Mage::getModel('training_distro/distributor');
+        $model = Mage::getModel('distro/distributor');
         Mage::register('current_distributor', $model);
         $id = $this->getRequest()->getParam('id');
 
@@ -79,7 +79,7 @@ class Training_Distro_Adminhtml_DistributorController
 
             $this->loadLayout();
 
-            $this->_setActiveMenu('catalog/training_distro');
+            $this->_setActiveMenu('catalog/distro');
 
             $this->renderLayout();
         } catch (Exception $e) {
@@ -96,7 +96,7 @@ class Training_Distro_Adminhtml_DistributorController
     {
         if ($data = $this->getRequest()->getPost()) {
             $this->_getSession()->setFormData($data);
-            $model = Mage::getModel('training_distro/distributor');
+            $model = Mage::getModel('distro/distributor');
             $id = $this->getRequest()->getParam('id');
 
             try {
@@ -139,7 +139,7 @@ class Training_Distro_Adminhtml_DistributorController
      */
     public function deleteAction()
     {
-        $model = Mage::getModel('training_distro/distributor');
+        $model = Mage::getModel('distro/distributor');
         $id = $this->getRequest()->getParam('id');
 
         try {

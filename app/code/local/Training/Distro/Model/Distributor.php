@@ -5,6 +5,6 @@ class Training_Distro_Model_Distributor
 {
     protected function _construct()
     {
-        $this->_init('training_distro/distributor');
+        $this->_init('distro/distributor');
     }
 }

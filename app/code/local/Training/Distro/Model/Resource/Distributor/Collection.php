@@ -5,7 +5,7 @@ class Training_Distro_Model_Resource_Distributor_Collection
 {
     protected function _construct()
     {
-        $this->_init('training_distro/distributor');
+        $this->_init('distro/distributor');
     }
 
     public function toOptionArray()

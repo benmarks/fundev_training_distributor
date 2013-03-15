@@ -8,14 +8,14 @@ class Training_Distro_Block_Adminhtml_Distributor_Edit
      *
      * $this->_blockGroup . '/' . $this->_controller . '_' . $this->_mode . '_form'
      *
-     * Child Class: training_distro/adminhtml_distributor_edit_form
+     * Child Class: distro/adminhtml_distributor_edit_form
      */
     protected function _construct()
     {
         parent::_construct();
 
         $this->_objectId = 'id';
-        $this->_blockGroup = 'training_distro';
+        $this->_blockGroup = 'distro';
         $this->_controller = 'adminhtml_distributor';
         $this->_mode = 'edit';
     }

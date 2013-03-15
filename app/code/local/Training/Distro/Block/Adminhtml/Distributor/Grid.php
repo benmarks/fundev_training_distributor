@@ -11,7 +11,7 @@ class Training_Distro_Block_Adminhtml_Distributor_Grid
     {
         parent::_construct();
 
-        $this->setId('training_distro_list');
+        $this->setId('distro_list');
         $this->setDefaultSort('id');
 
         /*
@@ -48,7 +48,7 @@ class Training_Distro_Block_Adminhtml_Distributor_Grid
      */
     protected function _prepareCollection()
     {
-        $collection = Mage::getResourceModel('training_distro/distributor_collection');
+        $collection = Mage::getResourceModel('distro/distributor_collection');
         $this->setCollection($collection);
 
         return parent::_prepareCollection();

@@ -5,15 +5,11 @@
 
     $installer->startSetup();
 
-    $installer->getConnection()->addColumn(
-        $installer->getTable('distro/distributor'),
-        'extended_comment',
-        array(
-            'type' => Varien_Db_Ddl_Table::TYPE_TEXT,
-            'nullable' => true,
-            'length' => '65k',
-            'comment' => 'Extended Comment Field'
-        )
-    );
-
+    $installer->getConnection()->addColumn($tableName, 'comment', array(
+        'type' => Varien_Db_Ddl_Table::TYPE_TEXT,
+        'nullable' => true,
+        'length' => '1k',
+        'comment' => 'Comment Field'
+    ));
+    
     $installer->endSetup();

@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Training_Distro>
-            <version>0.0.2.0</version>
+            <version></version>
         </Training_Distro>
     </modules>
     <adminhtml>
@@ -36,12 +36,14 @@
     </frontend>
     <global>
         <resources>
+            <!--
             <training_distributor_setup>
                 <setup>
                     <module>Training_Distro</module>
                     <class>Mage_Core_Model_Resource_Setup</class>
                 </setup>
             </training_distributor_setup>
+            -->
         </resources>
         <blocks>
             <distro>

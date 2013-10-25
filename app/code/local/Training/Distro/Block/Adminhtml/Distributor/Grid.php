@@ -114,6 +114,7 @@ class Training_Distro_Block_Adminhtml_Distributor_Grid
                     'caption' => $this->__('Delete'),
                     'url' => array('base' => '*/*/delete'),
                     'field' => 'id',
+                    'confirm' => $this->__('Are you sure you want to delete this distributor?'),
                 ),
             ),
             'filter' => false,

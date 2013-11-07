@@ -40,11 +40,6 @@ $table = $installer->getConnection()->newTable($tableName)
                         'nullable' => false,
                 ), 'Modified At')
         ->addIndex(
-                $installer->getIdxName($tableName, array('name')),
-                array('name'),
-                array('type' => Varien_Db_Adapter_Interface::INDEX_TYPE_UNIQUE)
-        )
-        ->addIndex(
                 $installer->getIdxName($tableName, array('email')),
                 array('email'),
                 array('type' => Varien_Db_Adapter_Interface::INDEX_TYPE_UNIQUE)

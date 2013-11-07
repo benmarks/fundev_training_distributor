@@ -1,6 +1,6 @@
 <?php
 
-// app/code/local/Training/Distro/sql/training_distro_setup/install-0.0.1.php
+// app/code/local/Training/Distro/sql/distro_setup/install-0.0.1.php
 
 /* @var $installer Mage_Core_Model_Resource_Setup */
 

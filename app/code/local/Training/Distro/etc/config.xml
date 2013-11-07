@@ -19,7 +19,7 @@
             <adminhtml>
                 <args>
                     <modules>
-<Training_Distro after="Mage_Adminhtml">Training_Distro_Adminhtml</Training_Distro>
+<distro after="Mage_Adminhtml">Training_Distro_Adminhtml</distro>
                     </modules>
                 </args>
             </adminhtml>
@@ -36,12 +36,12 @@
     </frontend>
     <global>
         <resources>
-            <training_distributor_setup>
+            <distro_setup>
                 <setup>
                     <module>Training_Distro</module>
                     <class>Mage_Core_Model_Resource_Setup</class>
                 </setup>
-            </training_distributor_setup>
+            </distro_setup>
         </resources>
         <blocks>
             <distro>

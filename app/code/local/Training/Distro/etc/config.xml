@@ -62,7 +62,7 @@
                 <class>Training_Distro_Model_Resource</class>
                 <entities>
                     <distributor>
-                        <table>training_distributor_entity</table>
+                        <table>training_distro_entity</table>
                     </distributor>
                 </entities>
             </distro_resource>
